@@ -28,7 +28,7 @@ namespace FotoQuestGo.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            services.AddDbContext<FotoQuestContext>(x => x.UseSqlServer(Configuration.GetConnectionString("FotoQuestDB")));
+            services.AddDbContext<_FotoQuestContext>(x => x.UseSqlServer(Configuration.GetConnectionString("FotoQuestDB")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

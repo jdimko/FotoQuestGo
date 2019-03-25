@@ -9,8 +9,10 @@ namespace FotoQuestGo.API.Models
     {
         public int ID { get; set; }
 
-        public string Title { get; set; }
-
         public DateTime SubmissionTime { get; set; }
+
+        public virtual ICollection<Foto> Fotos { get; set; }
+
+        public virtual ICollection<Answer> Answers { get; set; }
     }
 }
