@@ -1,7 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Threading.Tasks;
+using AutoMapper;
 using FotoQuestGo.API.Models;
 using FotoQuestGo.API.UnitOfWork;
 using FotoQuestGo.API.ViewModels;
@@ -29,12 +33,20 @@ namespace FotoQuestGo.API.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post([FromBody] QuestAddViewModel quest)
+        public IActionResult Post([FromBody] QuestAddViewModel questVM, List<IFormFile> files)
         {
-            //quest = _unitOfWork.QuestRepository.Add(quest);
-            //return new OkObjectResult(quest);
+            var quest = Mapper.Map<Quest>(questVM);
+            quest = _unitOfWork.QuestRepository.Add(quest);
 
-            return Ok();
+            foreach (var file in files)
+            {
+                var stream = file.OpenReadStream();
+                var name = file.FileName;
+
+                //TODO: Save each file and corresponding metadata in DB
+            }
+
+            return new OkObjectResult(quest);
         }
     }
 }
