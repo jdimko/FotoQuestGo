@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FotoQuestGo.API", "FotoQuestGo.API\FotoQuestGo.API.csproj", "{544EA11E-FE7A-49C8-BDA7-5871A11DD62D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FotoQuestGo.API.IntegrationTesting", "FotoQuestGo.API.IntegrationTesting\FotoQuestGo.API.IntegrationTesting.csproj", "{E2660241-98C8-46D6-9005-A9176D4593E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{544EA11E-FE7A-49C8-BDA7-5871A11DD62D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{544EA11E-FE7A-49C8-BDA7-5871A11DD62D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{544EA11E-FE7A-49C8-BDA7-5871A11DD62D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2660241-98C8-46D6-9005-A9176D4593E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2660241-98C8-46D6-9005-A9176D4593E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2660241-98C8-46D6-9005-A9176D4593E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2660241-98C8-46D6-9005-A9176D4593E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
