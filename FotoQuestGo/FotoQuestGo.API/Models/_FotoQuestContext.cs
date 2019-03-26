@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace FotoQuestGo.API.Models
 {
-    public class _FotoQuestContext : DbContext
+    public class FotoQuestContext : DbContext
     {
-        public _FotoQuestContext(DbContextOptions<_FotoQuestContext> options) : base(options)
+        public FotoQuestContext(DbContextOptions<FotoQuestContext> options) : base(options)
         {
         }
 

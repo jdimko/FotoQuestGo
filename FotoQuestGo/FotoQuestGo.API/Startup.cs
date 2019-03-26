@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using FotoQuestGo.API.Models;
+using FotoQuestGo.API.UnitOfWork;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -28,7 +29,8 @@ namespace FotoQuestGo.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            services.AddDbContext<_FotoQuestContext>(x => x.UseSqlServer(Configuration.GetConnectionString("FotoQuestDB")));
+            services.AddDbContext<FotoQuestContext>(x => x.UseSqlServer(Configuration.GetConnectionString("FotoQuestDB")));
+            services.AddScoped<IUnitOfWork, UnitOfWork.UnitOfWork>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
