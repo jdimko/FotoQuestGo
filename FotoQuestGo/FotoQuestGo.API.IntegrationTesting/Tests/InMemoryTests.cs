@@ -24,7 +24,6 @@ namespace FotoQuestGo.API.IntegrationTesting
 
             // Act
             var response = await _client.GetAsync(request);
-            //var temp = await response.Content.ReadAsStringAsync();
 
             // Assert
             var result = await response.Content.ReadAsAsync<List<Quest>>();
