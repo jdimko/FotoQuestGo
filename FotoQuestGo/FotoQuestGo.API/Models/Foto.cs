@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace FotoQuestGo.API.Models
 {
-    public enum Direction
+    public enum CardinalDirection
     {
         North,
         East,
@@ -22,7 +22,7 @@ namespace FotoQuestGo.API.Models
 
         public virtual Quest Quest { get; set; }
 
-        public Direction Direction { get; set; }
+        public CardinalDirection Direction { get; set; }
 
         //Decided to persist only original image
         //When foto is requested with different size, API will provide it on-the-fly
