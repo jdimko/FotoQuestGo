@@ -10,6 +10,7 @@ namespace FotoQuestGo.API.AutoMapper
     {
         public static void InitMaps()
         {
+            Mapper.Reset();
             Mapper.Initialize(x =>
             {
                 x.AddProfiles(new[] {

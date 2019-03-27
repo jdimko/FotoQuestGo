@@ -32,7 +32,6 @@ namespace FotoQuestGo.API
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddDbContext<FotoQuestContext>(x => x.UseSqlServer(Configuration.GetConnectionString("FotoQuestDB")));
             services.AddScoped<IUnitOfWork, UnitOfWork.UnitOfWork>();
-
             AutoMapperConfig.InitMaps();
         }
 

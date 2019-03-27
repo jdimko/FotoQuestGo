@@ -1,5 +1,8 @@
 ﻿using System;
+using AutoMapper;
+using FotoQuestGo.API.AutoMapper;
 using FotoQuestGo.API.Models;
+using FotoQuestGo.API.UnitOfWork;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.EntityFrameworkCore;
@@ -26,6 +29,8 @@ namespace FotoQuestGo.API.IntegrationTesting
                     options.UseInternalServiceProvider(serviceProvider);
                 });
 
+                services.AddScoped<IUnitOfWork, UnitOfWork.UnitOfWork>();
+
                 // Build the service provider.
                 var sp = services.BuildServiceProvider();
 
@@ -34,6 +39,7 @@ namespace FotoQuestGo.API.IntegrationTesting
                 {
                     var scopedServices = scope.ServiceProvider;
                     var appDb = scopedServices.GetRequiredService<FotoQuestContext>();
+
                     var logger = scopedServices.GetRequiredService<ILogger<CustomWebApplicationFactory<TStartup>>>();
 
                     // Ensure the database is created.
