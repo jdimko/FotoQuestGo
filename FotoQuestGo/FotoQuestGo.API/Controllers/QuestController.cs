@@ -33,19 +33,20 @@ namespace FotoQuestGo.API.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post([FromBody] QuestAddViewModel questVM, List<IFormFile> files)
+        public IActionResult Post([FromBody] QuestAddViewModel questVM)
         {
             var quest = Mapper.Map<Quest>(questVM);
             quest = _unitOfWork.QuestRepository.Add(quest);
 
-            foreach (var file in files)
-            {
-                var stream = file.OpenReadStream();
-                var name = file.FileName;
+            //foreach (var file in files)
+            //{
+            //    var stream = file.OpenReadStream();
+            //    var name = file.FileName;
 
-                //TODO: Save each file and corresponding metadata in DB
-            }
+            //    //TODO: Save each file and corresponding metadata in DB
+            //}
 
+            _unitOfWork.Save();
             return new OkObjectResult(quest);
         }
     }
