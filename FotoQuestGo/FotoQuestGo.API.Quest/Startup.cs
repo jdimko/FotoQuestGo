@@ -1,6 +1,7 @@
-﻿using FotoQuestGo.API.Quest.AutoMapper;
+﻿using AutoMapper;
 using FotoQuestGo.API.Quest.Context;
 using FotoQuestGo.API.Quest.UnitOfWork;
+using FotoQuestGo.Common.AutoMapperProfiles;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -25,7 +26,17 @@ namespace FotoQuestGo.API
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddDbContext<FotoQuestContext>(x => x.UseSqlServer(Configuration.GetConnectionString("FotoQuestDB")));
             services.AddScoped<IUnitOfWork, UnitOfWork>();
-            AutoMapperConfig.InitMaps();
+
+            // Auto Mapper Configurations
+            var mappingConfig = new MapperConfiguration(x =>
+            {
+                x.AddProfiles(new[] {
+                    typeof(QuestProfile),
+                });
+            });
+
+            IMapper mapper = mappingConfig.CreateMapper();
+            services.AddSingleton(mapper);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

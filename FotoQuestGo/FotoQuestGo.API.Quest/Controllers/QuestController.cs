@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using FotoQuestGo.API.Quest.UnitOfWork;
-using FotoQuestGo.API.Quest.ViewModels;
+using FotoQuestGo.Common.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 
@@ -11,10 +11,12 @@ namespace FotoQuestGo.API.Quest.Quest.Controllers
     public class QuestController : ControllerBase
     {
         private readonly IUnitOfWork _unitOfWork;
+        private readonly IMapper _mapper;
 
-        public QuestController(IUnitOfWork unitOfWork)
+        public QuestController(IUnitOfWork unitOfWork, IMapper mapper)
         {
             _unitOfWork = unitOfWork;
+            _mapper = mapper;
         }
 
         [HttpGet]
@@ -29,7 +31,7 @@ namespace FotoQuestGo.API.Quest.Quest.Controllers
         [Route("/api/[controller]/Create")]
         public IActionResult Create([FromForm] QuestAddViewModel questVM)
         {
-            var quest = Mapper.Map<Common.Models.Quest>(questVM);
+            var quest = _mapper.Map<Common.Models.Quest>(questVM);
             quest = _unitOfWork.QuestRepository.Add(quest);
             _unitOfWork.Save();
             return new OkObjectResult(quest);

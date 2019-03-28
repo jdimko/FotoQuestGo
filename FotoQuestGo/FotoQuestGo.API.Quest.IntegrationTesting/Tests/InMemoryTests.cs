@@ -1,4 +1,7 @@
-﻿using System;
+﻿using FotoQuestGo.API.Quest.Context;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -8,7 +11,7 @@ namespace FotoQuestGo.API.Quest.IntegrationTesting
 {
     public class InMemoryTests : IClassFixture<CustomWebApplicationFactory<Startup>>
     {
-        private readonly HttpClient _client;
+        private HttpClient _client;
 
         public InMemoryTests(CustomWebApplicationFactory<Startup> factory)
         {

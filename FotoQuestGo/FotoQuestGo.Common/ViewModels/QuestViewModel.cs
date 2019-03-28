@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace FotoQuestGo.API.Quest.ViewModels
+namespace FotoQuestGo.Common.ViewModels
 {
     public class QuestAddViewModel
     {
