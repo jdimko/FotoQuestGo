@@ -27,7 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FotoQuestGo.API\FotoQuestGo.API.Quest.csproj" />
+    <ProjectReference Include="..\FotoQuestGo.API.Quest\FotoQuestGo.API.Quest.csproj" />
   </ItemGroup>
 
 </Project>

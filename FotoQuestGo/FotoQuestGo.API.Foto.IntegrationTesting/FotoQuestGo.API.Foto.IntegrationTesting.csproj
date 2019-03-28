@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\FotoQuestGo.API.Foto\FotoQuestGo.API.Foto.csproj" />
+    <ProjectReference Include="..\FotoQuestGo.API.Foto\FotoQuestGo.API.Foto.csproj" />
   </ItemGroup>
 
   <ItemGroup>
