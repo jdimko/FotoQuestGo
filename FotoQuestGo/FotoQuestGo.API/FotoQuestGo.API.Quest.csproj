@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FotoQuestGo.Model\FotoQuestGo.Common.csproj" />
+    <ProjectReference Include="..\FotoQuestGo.Common\FotoQuestGo.Common.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,4 @@
-﻿namespace FotoQuestGo.API.Common.Models
+﻿namespace FotoQuestGo.Common.Models
 {
     public class Question
     {

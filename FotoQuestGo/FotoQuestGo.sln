@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FotoQuestGo.API.Foto", "..\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FotoQuestGo.API.Foto.IntegrationTesting", "FotoQuestGo.API.Foto.IntegrationTesting\FotoQuestGo.API.Foto.IntegrationTesting.csproj", "{9BD4335E-1DDE-45F3-A211-902719637954}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FotoQuestGo.Common", "FotoQuestGo.Model\FotoQuestGo.Common.csproj", "{8081C735-4ACD-4C19-BDF9-F3DDE6433EA5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FotoQuestGo.Common", "FotoQuestGo.Common\FotoQuestGo.Common.csproj", "{3ECFA40A-D4D8-44F9-9700-D4953D05EB5D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{9BD4335E-1DDE-45F3-A211-902719637954}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9BD4335E-1DDE-45F3-A211-902719637954}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9BD4335E-1DDE-45F3-A211-902719637954}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8081C735-4ACD-4C19-BDF9-F3DDE6433EA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8081C735-4ACD-4C19-BDF9-F3DDE6433EA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8081C735-4ACD-4C19-BDF9-F3DDE6433EA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8081C735-4ACD-4C19-BDF9-F3DDE6433EA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3ECFA40A-D4D8-44F9-9700-D4953D05EB5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3ECFA40A-D4D8-44F9-9700-D4953D05EB5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3ECFA40A-D4D8-44F9-9700-D4953D05EB5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3ECFA40A-D4D8-44F9-9700-D4953D05EB5D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

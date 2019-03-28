@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace FotoQuestGo.API.Common.Models
+namespace FotoQuestGo.Common.Models
 {
     public class Quest
     {

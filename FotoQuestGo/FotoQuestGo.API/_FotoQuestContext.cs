@@ -1,4 +1,4 @@
-﻿using FotoQuestGo.API.Common.Models;
+﻿using FotoQuestGo.Common.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace FotoQuestGo.API.Quest.Context
