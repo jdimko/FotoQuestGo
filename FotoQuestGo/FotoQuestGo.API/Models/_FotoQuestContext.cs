@@ -1,10 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using FotoQuestGo.API.Common.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace FotoQuestGo.API.Models
+namespace FotoQuestGo.API.Quest.Context
 {
     public class FotoQuestContext : DbContext
     {
@@ -33,7 +34,7 @@ namespace FotoQuestGo.API.Models
             );
         }
 
-        public DbSet<Quest> Quests { get; set; }
+        public DbSet<Common.Models.Quest> Quests { get; set; }
         public DbSet<Foto> Fotos { get; set; }
         public DbSet<Question> Questions { get; set; }
         public DbSet<Answer> Answers { get; set; }

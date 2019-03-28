@@ -8,16 +8,16 @@ EXPOSE 443
 
 FROM microsoft/dotnet:2.1-sdk-nanoserver-1803 AS build
 WORKDIR /src
-COPY ["FotoQuestGo.API/FotoQuestGo.API.Quest.csproj", "FotoQuestGo.API/"]
-RUN dotnet restore "FotoQuestGo.API/FotoQuestGo.API.Quest.csproj"
+COPY ["../FotoQuestGo.API.Foto/FotoQuestGo.API.Foto.csproj", "../FotoQuestGo.API.Foto/"]
+RUN dotnet restore "../FotoQuestGo.API.Foto/FotoQuestGo.API.Foto.csproj"
 COPY . .
-WORKDIR "/src/FotoQuestGo.API"
-RUN dotnet build "FotoQuestGo.API.Quest.csproj" -c Release -o /app
+WORKDIR "/src/../FotoQuestGo.API.Foto"
+RUN dotnet build "FotoQuestGo.API.Foto.csproj" -c Release -o /app
 
 FROM build AS publish
-RUN dotnet publish "FotoQuestGo.API.Quest.csproj" -c Release -o /app
+RUN dotnet publish "FotoQuestGo.API.Foto.csproj" -c Release -o /app
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app .
-ENTRYPOINT ["dotnet", "FotoQuestGo.API.Quest.dll"]
+ENTRYPOINT ["dotnet", "FotoQuestGo.API.Foto.dll"]

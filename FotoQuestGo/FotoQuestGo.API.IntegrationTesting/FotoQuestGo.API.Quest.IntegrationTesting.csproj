@@ -27,25 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FotoQuestGo.API\FotoQuestGo.API.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="Tests\fotoWest.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Tests\fotoGround.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Tests\fotoSouth.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Tests\fotoNorth.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Tests\fotoEast.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <ProjectReference Include="..\FotoQuestGo.API\FotoQuestGo.API.Quest.csproj" />
   </ItemGroup>
 
 </Project>

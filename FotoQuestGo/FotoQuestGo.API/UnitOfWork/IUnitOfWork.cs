@@ -1,10 +1,10 @@
-﻿using FotoQuestGo.API.Repository;
+﻿using FotoQuestGo.API.Quest.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace FotoQuestGo.API.UnitOfWork
+namespace FotoQuestGo.API.Quest.UnitOfWork
 {
     public interface IUnitOfWork
     {

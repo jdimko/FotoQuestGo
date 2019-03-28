@@ -5,10 +5,10 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Reflection;
 using System.Threading.Tasks;
-using FotoQuestGo.API.Models;
+using FotoQuestGo.API.Common.Models;
 using Xunit;
 
-namespace FotoQuestGo.API.IntegrationTesting
+namespace FotoQuestGo.API.Quest.IntegrationTesting
 {
     public class InMemoryTests : IClassFixture<CustomWebApplicationFactory<Startup>>
     {
@@ -23,13 +23,13 @@ namespace FotoQuestGo.API.IntegrationTesting
         public async Task CanGetQuestsThereAreNoQuests()
         {
             // Arrange
-            var request = "/api/quest";
+            var request = "/api/quest/GetAll";
 
             // Act
             var response = await _client.GetAsync(request);
 
             // Assert
-            var result = await response.Content.ReadAsAsync<List<Quest>>();
+            var result = await response.Content.ReadAsAsync<List<Common.Models.Quest>>();
             Assert.True(result.Count == 0);
         }
 
@@ -37,41 +37,27 @@ namespace FotoQuestGo.API.IntegrationTesting
         public async Task CanAddQuest()
         {
             // Arrange
-            var url = "api/quest";
-            var values = new[]{
-                new KeyValuePair<string, string>("Longitude", "Bar"),
-                new KeyValuePair<string, string>("Latitude", "Less"),
-                new KeyValuePair<string, string>("SubmissionTime", DateTime.Now.ToString())
+            var request = new
+            {
+                Url = "/api/quest/create",
+                Body = new
+                {
+                    Longitude = "21231231",
+                    Latitude = "1231231211",
+                    SubmissionTime = DateTime.Now,
+                    FotoURIs = new List<string>() {
+                        Guid.NewGuid().ToString(),
+                        Guid.NewGuid().ToString()
+                    }
+                }
             };
 
-            MultipartFormDataContent form = new MultipartFormDataContent();
-            foreach (var keyValuePair in values)
-                form.Add(new StringContent(keyValuePair.Value), keyValuePair.Key);
-
-            HttpContent content = new StringContent("files");
-            string fileName = "foto{0}.jpg";
-            string filePath = "";
-
-            foreach (var value in Enum.GetValues(typeof(CardinalDirection)))
-            {
-                filePath = Directory.GetCurrentDirectory() + string.Format(@"\Tests\" + fileName, value);
-                form.Add(content);
-                var stream = new FileStream(filePath, FileMode.Open);
-                content = new StreamContent(stream);
-                content.Headers.ContentDisposition = new ContentDispositionHeaderValue("form-data")
-                {
-                    Name = string.Format("foto{0}", value),
-                    FileName = string.Format(fileName, value)
-                };
-                form.Add(content);
-            }
-
             // Act
-            var response = await _client.PostAsync(url, form);
+            var response = await _client.PostAsync(request.Url, ContentHelper.GetStringContent(request.Body));
 
             // Assert
             response.EnsureSuccessStatusCode();
-            var result = await response.Content.ReadAsAsync<Quest>();
+            var result = await response.Content.ReadAsAsync<Common.Models.Quest>();
             Assert.True(result.ID > 0);
         }
     }

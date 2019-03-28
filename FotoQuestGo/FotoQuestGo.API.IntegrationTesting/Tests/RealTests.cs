@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
-using FotoQuestGo.API.Models;
+using FotoQuestGo.API.Common.Models;
 using Newtonsoft.Json;
 using Xunit;
 
-namespace FotoQuestGo.API.IntegrationTesting
+namespace FotoQuestGo.API.Quest.IntegrationTesting
 {
-    public class PhysicalDatabaseTests : IClassFixture<TestFixture<Startup>>
+    public class RealTests : IClassFixture<TestFixture<Startup>>
     {
         private HttpClient Client;
 
-        public PhysicalDatabaseTests(TestFixture<Startup> fixture)
+        public RealTests(TestFixture<Startup> fixture)
         {
             Client = fixture.Client;
         }
@@ -21,17 +21,13 @@ namespace FotoQuestGo.API.IntegrationTesting
         public async Task CanGetQuests()
         {
             // Arrange
-            var request = "/api/quest";
+            var request = "/api/quest/GetAll";
 
             // Act
             var response = await Client.GetAsync(request);
 
             // Assert
             response.EnsureSuccessStatusCode();
-
-            //Use the following lines to test for existing content in database
-            //var result = await response.Content.ReadAsAsync<List<Quest>>();
-            //Assert.True(result.Count == 2);
         }
     }
 }

@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
-using FotoQuestGo.API.Models;
-using FotoQuestGo.API.UnitOfWork;
-using FotoQuestGo.API.ViewModels;
+using FotoQuestGo.API.Quest.UnitOfWork;
+using FotoQuestGo.API.Quest.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace FotoQuestGo.API.Controllers
+namespace FotoQuestGo.API.Quest.Quest.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -26,27 +20,19 @@ namespace FotoQuestGo.API.Controllers
         }
 
         [HttpGet]
-        public IActionResult Get()
+        [Route("/api/[controller]/GetAll")]
+        public IActionResult GetAll()
         {
             var quests = _unitOfWork.QuestRepository.GetAll().ToList();
             return new OkObjectResult(quests);
         }
 
         [HttpPost]
-        public IActionResult Post([FromForm] QuestAddViewModel questVM,
-            [FromForm] IFormFile fotoNorth,
-            [FromForm] IFormFile fotoEast,
-            [FromForm] IFormFile fotoSouth,
-            [FromForm] IFormFile fotoWest,
-            [FromForm] IFormFile fotoGround
-            )
+        [Route("/api/[controller]/Create")]
+        public IActionResult Create([FromForm] QuestAddViewModel questVM)
         {
-            var quest = Mapper.Map<Quest>(questVM);
+            var quest = Mapper.Map<Common.Models.Quest>(questVM);
             quest = _unitOfWork.QuestRepository.Add(quest);
-
-            var stream = fotoNorth.OpenReadStream();
-            //TODO save stream to file for each foto
-
             _unitOfWork.Save();
             return new OkObjectResult(quest);
         }

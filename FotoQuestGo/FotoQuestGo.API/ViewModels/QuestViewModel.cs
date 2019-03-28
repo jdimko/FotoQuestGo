@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace FotoQuestGo.API.ViewModels
+namespace FotoQuestGo.API.Quest.ViewModels
 {
     public class QuestAddViewModel
     {
@@ -12,5 +12,7 @@ namespace FotoQuestGo.API.ViewModels
         public string Latitude { get; set; }
 
         public DateTime SubmissionTime { get; set; }
+
+        public ICollection<string> FotoURIs { get; set; }
     }
 }

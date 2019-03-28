@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace FotoQuestGo.API.Migrations
+namespace FotoQuestGo.API.Quest.Migrations
 {
     public partial class InitialCreate : Migration
     {

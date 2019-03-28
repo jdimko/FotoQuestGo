@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace FotoQuestGo.API.Quest.IntegrationTesting
+namespace FotoQuestGo.API.Foto.IntegrationTesting
 {
     public class TestFixture<TStartup> : IDisposable
     {

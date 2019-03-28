@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 
-namespace FotoQuestGo.API.Quest.IntegrationTesting
+namespace FotoQuestGo.API.Foto.IntegrationTesting
 {
     public static class ContentHelper
     {

@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using FotoQuestGo.API.Models;
+using FotoQuestGo.API.Common.Models;
+using FotoQuestGo.API.Quest.Context;
 
-namespace FotoQuestGo.API.Repository
+namespace FotoQuestGo.API.Quest.Repository
 {
     public class QuestRepository : IQuestRepository
     {
@@ -15,13 +16,13 @@ namespace FotoQuestGo.API.Repository
             _context = context;
         }
 
-        public Quest Add(Quest quest)
+        public Common.Models.Quest Add(Common.Models.Quest quest)
         {
             _context.Quests.Add(quest);
             return quest;
         }
 
-        public IQueryable<Quest> GetAll()
+        public IQueryable<Common.Models.Quest> GetAll()
         {
             return _context.Quests;
         }
