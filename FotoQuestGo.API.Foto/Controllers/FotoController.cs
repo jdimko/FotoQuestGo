@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using FotoQuestGo.API.Foto.FileStorage;
+﻿using FotoQuestGo.API.Foto.FileStorage;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace FotoQuestGo.API.Foto.Controllers
 {

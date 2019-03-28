@@ -1,9 +1,7 @@
-﻿using System;
-using FotoQuestGo.API.Foto.FileStorage;
+﻿using FotoQuestGo.API.Foto.FileStorage;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
 
 namespace FotoQuestGo.API.Foto.IntegrationTesting
 {

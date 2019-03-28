@@ -1,13 +1,11 @@
-﻿using System;
-using AutoMapper;
-using FotoQuestGo.API.Quest.AutoMapper;
-using FotoQuestGo.API.Quest.Context;
+﻿using FotoQuestGo.API.Quest.Context;
 using FotoQuestGo.API.Quest.UnitOfWork;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using System;
 
 namespace FotoQuestGo.API.Quest.IntegrationTesting
 {

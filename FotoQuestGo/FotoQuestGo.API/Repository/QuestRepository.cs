@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using FotoQuestGo.API.Quest.Context;
 using System.Linq;
-using System.Threading.Tasks;
-using FotoQuestGo.API.Common.Models;
-using FotoQuestGo.API.Quest.Context;
 
 namespace FotoQuestGo.API.Quest.Repository
 {

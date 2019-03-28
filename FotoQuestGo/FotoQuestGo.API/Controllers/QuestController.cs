@@ -1,10 +1,8 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
 using FotoQuestGo.API.Quest.UnitOfWork;
 using FotoQuestGo.API.Quest.ViewModels;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 
 namespace FotoQuestGo.API.Quest.Quest.Controllers
 {

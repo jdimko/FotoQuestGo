@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Net.Http;
-using System.Threading.Tasks;
-using FotoQuestGo.API.Foto;
+﻿using FotoQuestGo.API.Foto;
 using FotoQuestGo.API.Foto.IntegrationTesting;
-using Newtonsoft.Json;
+using System.Net.Http;
 using Xunit;
 
 namespace FotoQuestGo.API.IntegrationTesting
