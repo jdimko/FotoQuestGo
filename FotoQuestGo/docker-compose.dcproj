@@ -3,10 +3,10 @@
   <PropertyGroup Label="Globals">
     <ProjectVersion>2.1</ProjectVersion>
     <DockerTargetOS>Windows</DockerTargetOS>
-    <ProjectGuid>cb359e7d-9fb8-48cb-94a8-e087fe99c66c</ProjectGuid>
+    <ProjectGuid>7ea1d513-8d8d-42e9-a72e-3fea83ca03e8</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://{ServiceIPAddress}{ServicePort}/api/values</DockerServiceUrl>
-    <DockerServiceName>fotoquestgo.api</DockerServiceName>
+    <DockerServiceName>fotoquestgo.api.quest</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
     <None Include="docker-compose.override.yml">

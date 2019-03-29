@@ -1,8 +1,8 @@
 version: '3.4'
 
 services:
-  fotoquestgo.api:
-    image: ${DOCKER_REGISTRY-}fotoquestgoapi
+  fotoquestgo.api.quest:
+    image: ${DOCKER_REGISTRY-}fotoquestgoapiquest
     build:
       context: .
-      dockerfile: FotoQuestGo.API\Dockerfile
+      dockerfile: FotoQuestGo.API.Quest\Dockerfile

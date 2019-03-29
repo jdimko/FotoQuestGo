@@ -7,11 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FotoQuestGo.API.Quest", "Fo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FotoQuestGo.API.Quest.IntegrationTesting", "FotoQuestGo.API.Quest.IntegrationTesting\FotoQuestGo.API.Quest.IntegrationTesting.csproj", "{FF34E767-4905-4AE6-BC57-FDC0C3A11081}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FotoQuestGo.API.Foto", "FotoQuestGo.API.Foto\FotoQuestGo.API.Foto.csproj", "{FEBDA386-BCB8-45EE-8873-34C43F9E6698}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FotoQuestGo.API.Foto", "FotoQuestGo.API.Foto\FotoQuestGo.API.Foto.csproj", "{FEBDA386-BCB8-45EE-8873-34C43F9E6698}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FotoQuestGo.API.Foto.IntegrationTesting", "FotoQuestGo.API.Foto.IntegrationTesting\FotoQuestGo.API.Foto.IntegrationTesting.csproj", "{9BD4335E-1DDE-45F3-A211-902719637954}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FotoQuestGo.API.Foto.IntegrationTesting", "FotoQuestGo.API.Foto.IntegrationTesting\FotoQuestGo.API.Foto.IntegrationTesting.csproj", "{9BD4335E-1DDE-45F3-A211-902719637954}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FotoQuestGo.Common", "FotoQuestGo.Common\FotoQuestGo.Common.csproj", "{3ECFA40A-D4D8-44F9-9700-D4953D05EB5D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FotoQuestGo.Common", "FotoQuestGo.Common\FotoQuestGo.Common.csproj", "{3ECFA40A-D4D8-44F9-9700-D4953D05EB5D}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{7EA1D513-8D8D-42E9-A72E-3FEA83CA03E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{3ECFA40A-D4D8-44F9-9700-D4953D05EB5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3ECFA40A-D4D8-44F9-9700-D4953D05EB5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3ECFA40A-D4D8-44F9-9700-D4953D05EB5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EA1D513-8D8D-42E9-A72E-3FEA83CA03E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EA1D513-8D8D-42E9-A72E-3FEA83CA03E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EA1D513-8D8D-42E9-A72E-3FEA83CA03E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EA1D513-8D8D-42E9-A72E-3FEA83CA03E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
