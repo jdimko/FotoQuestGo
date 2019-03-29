@@ -1,4 +1,5 @@
 ﻿using FotoQuestGo.API.Foto.FileStorage;
+using FotoQuestGo.API.Foto.ImageResize;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -22,6 +23,7 @@ namespace FotoQuestGo.API.Foto
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.TryAddScoped<IFotoStorage, FotoStorage>();
+            services.TryAddScoped<IImageResize, ImageResize.ImageResize>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

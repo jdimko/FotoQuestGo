@@ -14,6 +14,12 @@ namespace FotoQuestGo.API.Foto.FileStorage
             RootPath = Directory.GetCurrentDirectory() + string.Format(@"\FileStorage\Uploads\");
         }
 
+        public FileStream Get(string URI)
+        {
+            var image = File.OpenRead(RootPath + URI);
+            return image;
+        }
+
         public async Task<string> PersistAsync(IFormFile foto)
         {
             var URI = Guid.NewGuid().ToString();
